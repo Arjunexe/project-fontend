@@ -9,7 +9,6 @@ export const isValidate = async({Fullname, Username, EmailOrMobile, Password,set
     } else{
         return true;
     }
-   
 }
 
 
@@ -19,8 +18,8 @@ function validFull(Fullname, seter) {
     if(isEmpty.test(Fullname)){
         seter('Fullname required')
         return false;
-    } else if (Fullname.length>10){
-           seter('Maximum of 10 characters as Fullname')
+    } else if (Fullname.length>15){
+           seter('Maximum of 15 characters as Fullname')
     }else {
         return true;
     }
@@ -34,8 +33,8 @@ function validFull(Fullname, seter) {
 function validUsername(Username, seter){
    try{ 
     const usernameRegex = /^[a-zA-Z0-9_]+$/;
-    if(Username.length>10){
-        seter('maximum of 10 characters as Username')
+    if(Username.length>15){
+        seter('maximum of 15 characters as Username')
         return false;
     }else if(Username.length<4){
         seter ('minimum of 4 characters as Username')
@@ -73,11 +72,47 @@ function validEmailorPhone(EmailOrMobile, seter) {
 }
 
 
+                    //////////////////////    LOGIN VALID     //////////////////////////////////
+
+
+export function isitEmpty({emailOrmobile, password, setError}) {
+    try{
+        const isEmpty = /^\s*$/;
+        if(isEmpty.test(emailOrmobile)) {
+            setError('Email or Mobile number required')
+            return false;
+        } else if(isEmpty.test(password)) {
+            setError('Password required')
+            return false;
+        } else {
+            return true;
+        }
+    } catch(error) {
+        console.log('error during isitEmpty : ', error);
+        return false;
+    }
+}
 
 
 
 
-// only check if Fullname is not an empty string or not, nothing else. adjust error in jsx, submit button should be in the center and error message should be at the bottom center. Also modify the code to look more minimial and increase the code reusability.
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+only check if Fullname is not an empty string or not, nothing else. adjust error in jsx, submit button should be in the center and error message should be at the bottom center. Also modify the code to look more minimial and increase the code reusability.
+
+*/
 
 
 

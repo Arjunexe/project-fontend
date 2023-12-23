@@ -1,3 +1,26 @@
-.form{
+.formLogin{
     margin: 10px;
+    padding-top: 5%;
+  
 }
+
+.containerLogin{
+    max-width: 300px;
+    max-height: 600px;
+    border: 1px solid #ccc;
+    padding: 30px;
+    background-color: rgb(253, 253, 253);
+    
+}
+
+@media (max-width: 768px) {
+    .containerLogin {
+      border: none;
+    }
+  }
+
+.errors{
+    word-wrap: break-word;
+    color: #ec6969;
+    font-weight:600;
+}  

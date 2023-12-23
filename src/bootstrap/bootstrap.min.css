@@ -87,7 +87,7 @@
     --bs-body-font-size: 1rem;
     --bs-body-font-weight: 400;
     --bs-body-line-height: 1.5;
-    --bs-body-color: #7b8ab8;
+    --bs-body-color: #05217e;
     --bs-body-color-rgb: 123, 138, 184;
     --bs-body-bg: #ffffff;
     --bs-body-bg-rgb: 217, 227, 241;
@@ -2428,10 +2428,11 @@ progress {
 
 .form-control {
     display: block;
-    width: 100%;
+    width: 95%;
+    height: 45px;
     padding: 1rem 1.5rem;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight:100;
     line-height: 1.5;
     color: var(--bs-body-color);
     -webkit-appearance: none;
