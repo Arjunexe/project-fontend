@@ -1,12 +1,14 @@
-import './App.css';
-import React from 'react';
-import { RouterProvider } from "react-router-dom";
-import Router from './routes/userRoutes/userRouter';
-
+// import './App.css';
+import React from "react";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <RouterProvider router={Router}/>
+    <div>
+      <Outlet />
+    </div>
+      
+    
   );
 }
 
